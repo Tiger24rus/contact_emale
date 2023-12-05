@@ -42,10 +42,10 @@ def index():  # Определение функции для обработки 
 def contacts():  # Определение функции для обработки запроса к URL /contacts/
     return render_template('contacts.html')  # Возвращает шаблон contacts.html
 
-@app.route('/users/') # Определение маршрута для URL /users/
-def users(): # Определение функции для обработки запроса к URL /contacts/
+@app.route('/users/') #Определение маршрута для URL /users/
+def users(): #Определение функции для обработки запроса к URL /contacts/
     users = User.query.all() #Получение всех записей из таблицы (класса) Users
     return render_template('users.html', users=users) #передача списка пользователей в HTML
 
-if __name__ == '__main__':  # Если код запускается напрямую
-    app.run(debug=True)  # Запуск приложения
+if __name__ == '__main__':  #Если код запускается напрямую
+    app.run(debug=True)  #Запуск приложения
